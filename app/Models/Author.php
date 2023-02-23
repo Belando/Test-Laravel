@@ -15,4 +15,8 @@ class Author extends Model
         'dni',      
     ];
 
+    public function book() {
+        return $this->belongsToMany(Book::class)->withTimestamps();
+    }
+
 }

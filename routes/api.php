@@ -46,3 +46,5 @@ Route::post('authors',[Author::class, 'store']);
 Route::delete('authors/{id}',[Author::class, 'destroy']);
 
 Route::put('authors',[Author::class, 'update']);
+
+Route::post('books/{author_id}',[Book::class, 'store']);

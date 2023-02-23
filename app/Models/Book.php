@@ -11,7 +11,8 @@ class Book extends Model
 
     protected $fillable = [
         'title',
-        'description',        
+        'description', 
+        'user_id'     
     ];
 
     public function getDescriptionAttribute($value){
@@ -21,6 +22,13 @@ class Book extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+
+    public function author() {
+        return $this->belongsToMany(Author::class)->withTimestamps();
+    }
+
+
+
 }
 
 

@@ -19,6 +19,7 @@ class BookFactory extends Factory
         return [
             'title' => $this-> faker->name(),
             'description'=> $this-> faker->text(25),
+            'user_id'=>rand(1,10),
         ];
     }
 }
